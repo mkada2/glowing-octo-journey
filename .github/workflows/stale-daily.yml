@@ -3,9 +3,10 @@ name: Mark stale issues and pull requests daily
 on:
 
 jobs:
-  stale:
+   on:
+  schedule:
+    - cron:  '*/15 * * * *'
 
-    runs-on: ubuntu-latest
 
     steps:
     - name: Close out meeting issues
